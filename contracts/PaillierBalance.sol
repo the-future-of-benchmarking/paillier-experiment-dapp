@@ -4,8 +4,11 @@ SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 contract PaillierBalance {
 
-    /*{REPLACE} - DO NOT TOUCH - AUTO GENERATED!!*/
-    /*{END} - DO NOT TOUCH - AUTO GENERATED!!*/            
+/*{REPLACE}*/
+uint public encryptedBalance = 0x9128877dca4023c5fbca1664779e343c5d952cacbb48ad42714eda6462a841aa;
+uint public g = 0xa4f18c8223fb935d0f1ad76559ecfdefe699c15ae3a9816ae48e00c9d0ae3a5c;
+uint public n = 0xf7cfbe1fcf65944cc477758568aafeef;
+/*{END}*/
     
     
 
