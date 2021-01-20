@@ -21,9 +21,11 @@ async function paillierTest () {
    const pubKey = new paillierBigint.PublicKey(BigInt(pub.n), BigInt(pub.g))
    // const privateKey = new paillierBigint.PrivateKey(priv.lambda, priv.mu, publicKey)
 
-   let encrypted = ['/*{REPLACE}*/','uint public encryptedBalance = 0x'+bigintConversion.bigintToHex(pubKey.encrypt(1n)) + ';',
+   let encrypted = ['/*{REPLACE} - DO NOT TOUCH - AUTO GENERATED!!*/','uint public encryptedBalance = 0x'+bigintConversion.bigintToHex(pubKey.encrypt(1n)) + ';',
    'uint public g = ' + pub.g + ';',
-   'uint public n = ' + pub.n + ';', '/*{END}*/'];
+   'uint public n = ' + pub.n + ';', 
+   'uint nSquared = 0x' + bigintConversion.bigintToHex(publicKey.n ** 2n) + ';',
+   '/*{END} - DO NOT TOUCH - AUTO GENERATED!!*/'];
 
    let soliditycontract = await fs.readFile('./contracts/PaillierBalance.sol');
    let soliditycontracttext = await soliditycontract.toString();
